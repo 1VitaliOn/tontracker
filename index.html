@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TON Gift Tracker</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <h1>TON Market Tracker</h1>
+            <p>Симулятор курсов и калькулятор доходности</p>
+        </header>
+
+        <section class="market-section">
+            <h2>🌍 Текущий рынок (Симуляция)</h2>
+            <div class="cards-grid">
+                
+                <div class="card market-card">
+                    <div class="icon">💎</div>
+                    <label>Курс TON (в $)</label>
+                    <input type="number" id="market-ton-usd" value="1.50" step="0.01">
+                    <span class="currency-label">USD</span>
+                </div>
+
+                <div class="card market-card">
+                    <div class="icon">🇺🇸</div>
+                    <label>Курс Доллара (в ₽)</label>
+                    <input type="number" id="market-usd-rub" value="80.00" step="0.1">
+                    <span class="currency-label">RUB</span>
+                </div>
+
+                <div class="card result-card">
+                    <div class="icon">🇷🇺</div>
+                    <label>Цена TON (в ₽)</label>
+                    <div class="big-value" id="market-ton-rub">0 ₽</div>
+                    <span class="sub-text">Автоматический пересчет</span>
+                </div>
+            </div>
+        </section>
+
+        <hr>
+
+        <section class="portfolio-section">
+            <h2>🎁 История покупки (Подарок)</h2>
+            <div class="input-row">
+                <div class="input-group">
+                    <label>Количество TON</label>
+                    <input type="number" id="buy-amount" value="50">
+                </div>
+                <div class="input-group">
+                    <label>Цена покупки TON ($)</label>
+                    <input type="number" id="buy-price-ton" value="1.90" step="0.01">
+                </div>
+                <div class="input-group">
+                    <label>Курс доллара при покупке (₽)</label>
+                    <input type="number" id="buy-price-usd" value="100.00" step="0.1">
+                </div>
+            </div>
+
+            <div class="results-dashboard">
+                <div class="result-box">
+                    <span>Потрачено изначально:</span>
+                    <strong id="total-spend">0 ₽</strong>
+                </div>
+                <div class="result-box">
+                    <span>Текущая стоимость:</span>
+                    <strong id="current-value">0 ₽</strong>
+                </div>
+                <div class="result-box highlight">
+                    <span>Прибыль / Убыток:</span>
+                    <strong id="profit-loss">0 ₽</strong>
+                </div>
+            </div>
+
+            <div class="advice-box" id="advice-box">
+                <p>💡 Чтобы выйти в ноль сейчас, курс TON должен быть: <strong id="breakeven-ton">...</strong> $</p>
+            </div>
+        </section>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
