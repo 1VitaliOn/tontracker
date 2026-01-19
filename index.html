@@ -8,6 +8,14 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
+<header>
+    <h1>TON Market Tracker</h1>
+    <p>Симулятор курсов и калькулятор доходности</p>
+    <button id="refresh-api" style="padding: 8px 16px; cursor: pointer; background: var(--accent-blue); color: white; border: none; border-radius: 5px; margin-top: 10px;">
+        🔄 Обновить курсы из сети
+    </button>
+    <div id="api-status" style="font-size: 0.8rem; margin-top: 5px; color: var(--text-secondary);"></div>
+</header>
 <body>
 
     <div class="container">
@@ -17,7 +25,7 @@
         </header>
 
         <section class="market-section">
-            <h2>🌍 Текущий рынок (Симуляция)</h2>
+            <h2>🌍 Текущий рынок</h2>
             <div class="cards-grid">
                 
                 <div class="card market-card">
@@ -46,7 +54,7 @@
         <hr>
 
         <section class="portfolio-section">
-            <h2>🎁 История покупки (Подарок)</h2>
+            <h2>🎁 История покупки</h2>
             <div class="input-row">
                 <div class="input-group">
                     <label>Количество TON</label>
